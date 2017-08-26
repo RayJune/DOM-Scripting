@@ -14,6 +14,7 @@ function addClass(element,value) {
     element.className+= value;
   }
 }
+
 function getNextElement(node) {
   if(node.nodeType == 1) {
 	return node;

@@ -20,7 +20,7 @@ function displayAccesskeys() {
   var list = document.createElement("ul");
 // loop through the accesskeys
   for (key in akeys) {
-    var text = akeys[key];
+    var text = akeys[key];  //此处的for in遍历很巧妙
 //  create the string to put in the list item
     var str = key + " : "+text;
 // create the list item

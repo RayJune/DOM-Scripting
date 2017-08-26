@@ -53,9 +53,9 @@ function preparePlaceholder() {
   description.setAttribute("id","description");
   var desctext = document.createTextNode("Choose an image");
   description.appendChild(desctext);
-  var gallery = document.getElementById("imagegallery");
-  document.getElementsByTagName("body")[0].appendChild(placeholder);
-  document.getElementsByTagName("body")[0].appendChild(description);
+  var body = document.getElementsByTagName("body")[0];
+  body.appendChild(placeholder);
+  body.appendChild(description); //也可以用document.body.appenChild(...);
 }
 
 addLoadEvent(preparePlaceholder);

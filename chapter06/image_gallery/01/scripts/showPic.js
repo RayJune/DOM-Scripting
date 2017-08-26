@@ -1,9 +1,11 @@
 function showPic(whichpic) {
-  if (!document.getElementById("placeholder")) return true;
-  var source = whichpic.getAttribute("href");
   var placeholder = document.getElementById("placeholder");
+  if (!placeholder) return true;
+
+  var source = whichpic.getAttribute("href");
   placeholder.setAttribute("src",source);
-  if (!document.getElementById("description")) return false;
+  
+  if (!document.getElementById("description")) {return false;}
   if (whichpic.getAttribute("title")) {
     var text = whichpic.getAttribute("title");
   } else {
@@ -19,13 +21,16 @@ function showPic(whichpic) {
 function prepareGallery() {
   if (!document.getElementsByTagName) return false;
   if (!document.getElementById) return false;
-  if (!document.getElementById("imagegallery")) return false;
+
   var gallery = document.getElementById("imagegallery");
+  if (!gallery) return false;
+
   var links = gallery.getElementsByTagName("a");
-  for ( var i=0; i < links.length; i++) {
+
+  for (var i = 0; i < links.length; i++) {
     links[i].onclick = function() {
       return showPic(this);
-	}
+  }
     links[i].onkeypress = links[i].onclick;
   }
 }
@@ -42,4 +47,6 @@ function addLoadEvent(func) {
   }
 }
 
+
 addLoadEvent(prepareGallery);
+

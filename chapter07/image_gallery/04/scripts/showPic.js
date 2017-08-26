@@ -10,6 +10,7 @@ function addLoadEvent(func) {
   }
 }
 
+//因为没有insetAfter()，所以要自己写一个
 function insertAfter(newElement,targetElement) {
   var parent = targetElement.parentNode;
   if (parent.lastChild == targetElement) {

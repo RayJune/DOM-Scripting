@@ -16,7 +16,7 @@ function displayAbbreviations() {
   var dlist = document.createElement("dl");
 // loop through the definitions
   for (key in defs) {
-    var definition = defs[key];
+    var definition = defs[key]; 
 // create the definition title
     var dtitle = document.createElement("dt");
     var dtitle_text = document.createTextNode(key);

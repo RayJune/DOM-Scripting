@@ -1,9 +1,9 @@
 function displayAbbreviations() {
   if (!document.getElementsByTagName || !document.createElement || !document.createTextNode) return false;
-// get all the abbreviations
+// get all the abbreviations 
   var abbreviations = document.getElementsByTagName("abbr");
   if (abbreviations.length < 1) return false;
-  var defs = new Array();
+  var defs = [];
 // loop through the abbreviations
   for (var i=0; i<abbreviations.length; i++) {
     var current_abbr = abbreviations[i];

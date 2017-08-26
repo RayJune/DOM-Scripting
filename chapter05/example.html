@@ -3,27 +3,10 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Example</title>
-<script type="text/JavaScript">
-window.onload = function() {
-  if (!document.getElementsByTagName) return false;
-  var lnks = document.getElementsByTagName("a");
-  for (var i=0; i<lnks.length; i++) {
-    if (lnks[i].getAttribute("class") == "popup") {
-      lnks[i].onclick = function() {
-        popUp(this.getAttribute("href"));
-        return false;
-      }
-    }
-  }
-}
-
-function popUp(winURL) {
-  window.open(winURL,"popup","width=320,height=480");
-}
-
-</script>
 </head>
 <body>
-<a href="http://www.example.com/" class="popup">Example</a>
+  <!-- //主要演示将JS行为与结构分离(onclick) -->
+  <a href="http://www.example.com/" class="popup">Example</a>
+  <script type="text/javascript" src="scripts/(疑问)newWindow.js"></script>
 </body>
 </html>

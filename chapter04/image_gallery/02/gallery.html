@@ -3,12 +3,13 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Image Gallery</title>
-	<script type="text/javascript" src="scripts/showPic.js"></script>
 </head>
 <body>
   <h1>Snapshots</h1>
+  <!-- 第一次优化：不解释 -->
   <ul>
     <li>
+      <!-- return false可以组织a的默认行为（打开一个新的链接）被调用 -->
       <a href="images/fireworks.jpg" title="A fireworks display" onclick="showPic(this); return false;">Fireworks</a>
     </li>
     <li>
@@ -22,5 +23,7 @@
     </li>
   </ul>
   <img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+  <script>window.onload = console.log(11);</script>
+  <script type="text/javascript" src="scripts/showPic.js"></script>
 </body>
 </html>

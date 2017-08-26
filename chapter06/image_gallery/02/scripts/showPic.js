@@ -13,7 +13,7 @@ function showPic(whichpic) {
   if (description.firstChild.nodeType == 3) {
     description.firstChild.nodeValue = text;
   }
-  return false;
+  return true;
 }
 
 function prepareGallery() {
@@ -24,7 +24,7 @@ function prepareGallery() {
   var links = gallery.getElementsByTagName("a");
   for ( var i=0; i < links.length; i++) {
     links[i].onclick = function() {
-      return showPic(this);
+      return showPic(this) ? false : true; //把控制a原始事件响应放在这里
 	}
     links[i].onkeypress = links[i].onclick;
   }
